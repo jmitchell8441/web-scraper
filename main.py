@@ -31,6 +31,7 @@ project_df = pd.DataFrame.from_dict(project_list, orient = 'index')
 
 #Make table look more readable 
 project_df['project_name'] = project_df.index
-project_df.colums = ['project_url', 'project_name']
+project_df.columns = ['project_url', 'project_name']
 project_df = project_df.reset_index(drop=True)
+project_df.to_csv('project_list.csv')
 
